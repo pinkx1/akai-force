@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#bf181b">
+  <title>AKAI Force — Make the music. Standalone.</title>
+  <meta name="description" content="Play. Perform. Produce. Discover AKAI Force, the standalone music production and performance system.">
+  <link rel="preload" href="league-gothic.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="hero.webp" as="image">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#features">Skip to features</a>
+<main>
+  <div class="intro-story" id="overview">
+    <div class="intro-stage">
+      <section class="hero" aria-label="AKAI Force">
+        <div class="hero-art"><img src="hero.webp" alt="AKAI Force with illuminated performance pads" fetchpriority="high"></div>
+        <a class="hero-brand" href="#overview" aria-label="AKAI Force home"><img src="logo.svg" alt="AKAI Professional"><span>FORGE</span></a>
+        <div class="hero-bottom"><h1>Make the music. Standalone.</h1><div class="hero-actions"><a class="button button-outline" href="#in-action"><img src="action.svg" alt="">See It in Action</a><a class="button" href="#buy">Buy</a></div></div>
+      </section>
+      <section class="intro-cover" aria-label="Music without limits">
+        <div class="intro-copy"><p>Akai Force brings music production and live performance together.</p><p>Create beats, shape sounds, arrange tracks, and bring ideas to life wherever inspiration strikes. No computer required.</p><p>From your first idea to your final performance, it's all in your hands.</p></div>
+      </section>
+    </div>
+  </div>
+  <section class="features" id="features" aria-labelledby="features-heading">
+    <h2 id="features-heading">Take a closer look.</h2>
+    <div class="carousel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Force features">
+      <article class="card" aria-label="1 of 6"><div class="card-media"><div class="crop crop-pads"><img src="pads.webp" alt="A close-up of Force’s illuminated RGB pads" loading="lazy"></div></div><p><strong>64 RGB Performance Pads.</strong> Turn ideas into performances. Play beats, launch clips, and build arrangements in real time with 64 velocity-sensitive RGB pads.</p></article>
+      <article class="card" aria-label="2 of 6"><div class="card-media"><div class="connection-crops"><div class="crop crop-rear-one"><img src="rear.webp" alt="Audio inputs and outputs on Force’s rear panel" loading="lazy"></div><div class="crop crop-rear-two"><img src="rear.webp" alt="MIDI, CV and USB connections" loading="lazy"></div></div></div><p><strong>Audio, MIDI &amp; CV Connections.</strong> Bring your entire setup together. Record external instruments and connect synths, controllers, and other gear through audio, MIDI, and CV/Gate connections.</p></article>
+      <article class="card" aria-label="3 of 6"><div class="card-media"><div class="crop crop-splice"><img src="splice.webp" alt="Splice sample library on the Force touchscreen" loading="lazy"></div></div><p><strong>Splice &amp; Sample Import.</strong> Spend less time searching and more time creating. Sync sounds from your Splice library over Wi-Fi, or import your own samples via USB or SD card.</p></article>
+      <article class="card" aria-label="4 of 6"><div class="card-media"><div class="crop crop-sampling"><img src="sampling.webp" alt="Sampling and waveform editing on Force" loading="lazy"></div></div><p><strong>Sampling &amp; MPC Stems.</strong> Transform any recording into something new. Chop and reshape samples, or use optional MPC Stems to isolate vocals, drums, bass, and other instruments.</p></article>
+      <article class="card" aria-label="5 of 6"><div class="card-media"><div class="crop crop-ableton"><img src="ableton.webp" alt="Ableton Live integration" loading="lazy"></div></div><p><strong>Ableton Live Integration.</strong> Move seamlessly between hardware and software. Control Ableton Live, sync your sessions with Ableton Link, or export Force projects directly as Ableton Live Sets.</p></article>
+      <article class="card card-small" aria-label="6 of 6"><div class="card-media"><div class="crop crop-synth"><img src="synth.webp" alt="Force’s built-in synthesizers and effects" loading="lazy"></div></div><p><strong>Built-in Synths &amp; Effects.</strong> Create your signature sound from scratch. Build melodies with built-in synthesizers, shape them with effects, and produce without a computer.</p></article>
+    </div>
+    <div class="carousel-controls"><span class="sr-only" id="carousel-status" aria-live="polite">Feature 1 of 6</span><button class="circle previous" aria-label="Previous feature" disabled><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><button class="circle next" aria-label="Next feature"><svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button></div>
+  </section>
+  <section class="video-section" id="in-action" aria-labelledby="video-heading">
+    <h2 id="video-heading">Hear an idea become a track.</h2>
+    <div class="video-stage"><video id="force-video" muted playsinline loop preload="none" poster="poster.webp" aria-label="AKAI Force sampling performance"><source src="final_video.mp4" type="video/mp4"></video><div class="video-buttons"><button class="circle video-sound" aria-label="Turn sound on" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="muted-symbol" d="m16 9 5 6m0-6-5 6"/><path class="sound-symbol" d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></svg></button><button class="circle video-play" aria-label="Play video" aria-pressed="false"><svg viewBox="0 0 24 24"><path class="play-symbol" d="m8 5 11 7-11 7z"/><path class="pause-symbol" d="M8 5v14M16 5v14"/></svg></button></div><p class="video-caption">Capture a vocal phrase. Chop it, shape it,<br>and build something new — all on Force.</p><span class="sr-only" id="video-status" aria-live="polite"></span></div>
+  </section>
+  <section class="specs" id="specs" aria-labelledby="specs-heading">
+    <h2 id="specs-heading">Tech specs.</h2>
+    <dl class="spec-grid performance"><div><dd>64</dd><dt>RGB performance pads</dt><p>Velocity- and pressure-sensitive</p></div><div><dd>6.9″</dd><dt>Full-color touchscreen</dt><p>176 mm diagonal</p></div><div><dd>8</dd><dt>Touch-sensitive knobs</dt><p>360° control</p></div></dl>
+    <div class="spec-rear"><img src="spec-rear.webp" alt="Rear view of AKAI Force showing all audio, MIDI, CV, USB and Ethernet connections" loading="lazy"></div>
+    <dl class="spec-grid connections"><div><dd>2 in / 4 out</dd><dt>Audio connections</dt><p>XLR + ¼″ TRS inputs<br>¼″ TRS outputs · Stereo headphones</p></div><div><dd>MIDI + CV</dd><dt>Connect your setup</dt><p>MIDI In / Out / Thru<br>4 CV/Gate outputs</p></div><div><dd>USB + SD</dd><dt>Expand your workflow</dt><p>2 USB-A · 1 USB-B<br>SD card slot · Ethernet</p></div></dl>
+    <dl class="spec-grid physical"><div><dd>350 × 389 × 72.5 mm</dd><dt>Width × depth × height</dt></div><div><dd>56</dd><dt>Backlit function buttons</dt></div><div><dd>19 V / 3.42 A</dd><dt>Power adapter included</dt></div></dl>
+  </section>
+  <section class="purchase" id="buy" aria-labelledby="buy-heading"><div class="purchase-details"><div><h2 id="buy-heading">AKAI Force.</h2><p>Play. Perform. Produce.<br>Standalone. No computer required.</p></div><div class="purchase-action"><p class="price">$1,499</p><a class="button" href="https://www.akaipro.com/dealers/" target="_blank" rel="noopener">Buy now<span class="sr-only"> — find an authorized dealer</span></a></div></div><div class="purchase-art"><img src="purchase.webp" alt="AKAI Force standalone production and performance system" loading="lazy"></div></section>
+</main>
+<footer><div class="footer-main"><div class="footer-brand"><a href="#overview" aria-label="Back to top"><b>AKAI</b><span>PROFESSIONAL</span></a><p>Play. Perform. Produce.</p></div><nav aria-label="Product"><h3>Force</h3><a href="#overview">Overview</a><a href="#specs">Tech specs</a><a href="#buy">Buy Force</a></nav><nav aria-label="Support"><h3>Support</h3><a href="https://www.akaipro.com/downloads-and-support/downloads/" target="_blank" rel="noopener">Downloads</a><a href="https://support.akaipro.com/" target="_blank" rel="noopener">Get support</a><a href="https://www.akaipro.com/dealers/" target="_blank" rel="noopener">Find a dealer</a></nav></div><div class="footer-legal"><div><a href="https://www.akaipro.com/privacy/">Privacy policy</a><a href="https://www.akaipro.com/terms-of-use/">Terms of use</a></div><p>© 2026 inMusic, LLC. All rights reserved.</p></div></footer>
+</body></html>
