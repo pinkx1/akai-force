@@ -81,6 +81,44 @@
   }
   ['pointerup','pointercancel','lostpointercapture'].forEach(type => rail.addEventListener(type, finishDrag));
 
+  const powerButton = document.querySelector('.power-button');
+  let clickAudio;
+  function playMechanicalClick() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
+    try {
+      clickAudio ||= new AudioContext();
+      const playClick = () => {
+        // Two tiny, damped impulses: the switch pressing in and springing back.
+        [0, .095].forEach((delay, index) => {
+          const length = Math.ceil(clickAudio.sampleRate * .035);
+          const buffer = clickAudio.createBuffer(1, length, clickAudio.sampleRate);
+          const samples = buffer.getChannelData(0);
+          for (let i = 0; i < length; i++) samples[i] = (Math.random() * 2 - 1) * Math.exp(-i / (length * .13));
+          const source = clickAudio.createBufferSource();
+          source.buffer = buffer;
+          const filter = clickAudio.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = index ? 2100 : 1400;
+          const gain = clickAudio.createGain();
+          gain.gain.value = index ? .13 : .2;
+          source.connect(filter).connect(gain).connect(clickAudio.destination);
+          source.onended = () => { source.disconnect(); filter.disconnect(); gain.disconnect(); };
+          source.start(clickAudio.currentTime + delay);
+        });
+      };
+      if (clickAudio.state === 'suspended') clickAudio.resume().then(playClick).catch(() => {});
+      else if (clickAudio.state === 'running') playClick();
+    } catch { /* Animation still works when audio is unavailable. */ }
+  }
+  powerButton.addEventListener('click', () => {
+    powerButton.classList.remove('is-pressing');
+    void powerButton.offsetWidth;
+    powerButton.classList.add('is-pressing');
+    playMechanicalClick();
+  });
+  powerButton.addEventListener('animationend', () => powerButton.classList.remove('is-pressing'));
+
   const video = document.querySelector('#force-video');
   const play = document.querySelector('.video-play');
   const sound = document.querySelector('.video-sound');
